@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/pppershin/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Daniil Pershin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pppershin/frontend-project-lvl1/issues"
@@ -22,5 +22,10 @@
   "homepage": "https://github.com/pppershin/frontend-project-lvl1#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
