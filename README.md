@@ -3,4 +3,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/808a640a88bf26dfb1ef/maintainability)](https://codeclimate.com/github/pppershin/frontend-project-lvl1/maintainability)
 [![Linter](https://github.com/pppershin/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg?event=push)](https://github.com/pppershin/frontend-project-lvl1/actions)
 
-[![asciicast](https://asciinema.org/a/omGFOJOc2aGrF7YcjslMXzy1F.svg)](https://asciinema.org/a/omGFOJOc2aGrF7YcjslMXzy1F)
+[![asciicast](https://asciinema.org/a/490263.svg)](https://asciinema.org/a/490263)
