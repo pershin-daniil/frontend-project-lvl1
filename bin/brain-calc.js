@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 import {
   intro,
-  isEvenRandom,
+  getRandomExpression,
   getAnswer,
   compareResults,
   final,
 } from '../src/index.js';
 
-const name = intro('Answer "yes" if the number is even, otherwise answer "no".');
+const name = intro('What is the result of the expression?');
 
 let i = 0;
 
 while (i < 3) {
   // Task
-  const correctAnswer = isEvenRandom();
+  const correctAnswer = getRandomExpression();
   // Answer
-  const userAnswer = getAnswer().toLowerCase();
+  const userAnswer = getAnswer();
   // Result
   i += compareResults(correctAnswer, userAnswer);
   if (i >= 3) final(correctAnswer, userAnswer, i, name);
