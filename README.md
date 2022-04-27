@@ -5,12 +5,14 @@
 
 # Brain Games
 
-Seria of games where you give three correct answer to win. If you make a mistake you lose.
+Serie of games where you give three correct answer to win. If you make a mistake you lose.
 
 ## Brain Even
 
 	brain-even
+
 Is a number is even? Just say "yes" or "no". Ease pease :lemon::sweat_drops:
+
 [![asciicast](https://asciinema.org/a/490263.svg)](https://asciinema.org/a/490263)
 
 ## Brain Calculator
