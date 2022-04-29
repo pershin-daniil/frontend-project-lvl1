@@ -59,8 +59,8 @@ An arithmetic progression or arithmetic sequence is a sequence of numbers such t
 
 ## Brain Prime
 
-  brain-prime
+	brain-prime
 
-Prime numbers are numbers that have only 2 factors: 1 and themselves. Just answer "yes" or "no". You'll manage it.
+Prime numbers are numbers that have only 2 factors: 1 and themselves. Just answer "yes" or "no". You'll manage it. :people_hugging:
 
 [![asciicast](https://asciinema.org/a/491136.svg)](https://asciinema.org/a/491136)
