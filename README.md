@@ -5,7 +5,25 @@
 
 # Brain Games
 
-Serie of games where you give three correct answer to win. If you make a mistake you lose.
+Serie of games where you give three correct answers to win. If you make a mistake you lose.
+
+## Installation
+
+To install Brain Games you need to clone repository by command in your shell.
+
+	git clone git@github.com:pppershin/frontend-project-lvl1.git
+
+Then by using Make file install npm package localy.
+
+	make install
+	make publish
+	npm link
+
+And now you can play, the first command is 
+
+	brain-games
+
+Just say hello to you :wave:
 
 ## Brain Even
 
@@ -22,3 +40,11 @@ Is a number is even? Just say "yes" or "no". Ease pease :lemon::sweat_drops:
 Are you good at math? So, we’ll see. There are a couple of expressions here, just solve them.
 
 [![asciicast](https://asciinema.org/a/490448.svg)](https://asciinema.org/a/490448)
+
+## Brain GCD
+
+	brain-gcd
+
+GCD - the greatest common divisor. Can you solve it out?
+
+[![asciicast](https://asciinema.org/a/490988.svg)](https://asciinema.org/a/490988)

@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-// Math logic
-export const getRandomNum = (max) => Math.floor(Math.random() * max);
+// Math funtions
+export const getRandomNum = (max = 100) => Math.floor(Math.random() * max);
 
+// Games show the question and then return correct answer.
 export const isEvenRandom = () => {
   const currentNum = getRandomNum(100);
   console.log(`Question: ${currentNum}`);
@@ -32,7 +33,23 @@ export const getRandomExpression = () => {
   return null;
 };
 
-// Game logic
+export const gcd = () => {
+  let a = getRandomNum(100);
+  let b = getRandomNum(100);
+
+  console.log(`Question: ${a} ${b}`);
+
+  while (a !== 0 && b !== 0) {
+    if (a > b) {
+      a %= b;
+    } else {
+      b %= a;
+    }
+  }
+  return a + b;
+};
+
+// Game interface
 export const intro = (description) => {
   const name = greeting();
   console.log(description);
