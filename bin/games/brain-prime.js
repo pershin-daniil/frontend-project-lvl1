@@ -4,7 +4,7 @@ import {
   getAnswer,
   gameLoop,
   getIsPrimeTask,
-} from '../src/index.js';
+} from '../../src/index.js';
 
 const name = intro('Answer "yes" if given number is prime. Otherwise answer "no"');
 

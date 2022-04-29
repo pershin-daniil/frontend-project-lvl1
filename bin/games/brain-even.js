@@ -4,7 +4,7 @@ import {
   getIsEvenTask,
   getAnswer,
   gameLoop,
-} from '../src/index.js';
+} from '../../src/index.js';
 
 const name = intro('Answer "yes" if the number is even, otherwise answer "no".');
 

@@ -4,7 +4,7 @@ import {
   getExpressionTask,
   getAnswer,
   gameLoop,
-} from '../src/index.js';
+} from '../../src/index.js';
 
 const name = intro('What is the result of the expression?');
 

@@ -4,7 +4,7 @@ import {
   getAnswer,
   gameLoop,
   getProgressionTask,
-} from '../src/index.js';
+} from '../../src/index.js';
 
 const name = intro('What number is missing in the progression?');
 
