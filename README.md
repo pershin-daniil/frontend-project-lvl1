@@ -19,7 +19,7 @@ Then by using Make file install npm package localy.
 	make publish
 	npm link
 
-And now you can play, the first command is 
+And now you can play, the first command is
 
 	brain-games
 
@@ -48,3 +48,11 @@ Are you good at math? So, we’ll see. There are a couple of expressions here, j
 GCD - the greatest common divisor. Can you solve it out?
 
 [![asciicast](https://asciinema.org/a/490988.svg)](https://asciinema.org/a/490988)
+
+## Brain Progression
+
+	brain-progression
+
+An arithmetic progression or arithmetic sequence is a sequence of numbers such that the difference between the consecutive terms is constant. In this game you will find out missing number in sequence. Good luck! :four_leaf_clover:
+
+[![asciicast](https://asciinema.org/a/491056.svg)](https://asciinema.org/a/491056)
