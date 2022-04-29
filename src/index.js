@@ -72,3 +72,11 @@ export const final = (correctAnswer, userAnswer, counter, userName) => {
   }
   return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
 };
+
+export const gameLoop = (task, answer, name, i) => {
+  const correctAnswer = task;
+  const userAnswer = answer;
+  const currentResult = compareResults(correctAnswer, userAnswer) + i;
+  if (currentResult >= 3) return final(correctAnswer, userAnswer, i, name);
+  return currentResult;
+};

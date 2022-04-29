@@ -3,20 +3,11 @@ import {
   intro,
   getRandomExpression,
   getAnswer,
-  compareResults,
-  final,
+  gameLoop,
 } from '../src/index.js';
 
 const name = intro('What is the result of the expression?');
 
-let i = 0;
-
-while (i < 3) {
-  // Task
-  const correctAnswer = getRandomExpression();
-  // Answer
-  const userAnswer = getAnswer();
-  // Result
-  i += compareResults(correctAnswer, userAnswer);
-  if (i >= 3) final(correctAnswer, userAnswer, i, name);
+for (let i = 0; i <= 4;) {
+  i += gameLoop(getRandomExpression(), getAnswer(), name, i);
 }
