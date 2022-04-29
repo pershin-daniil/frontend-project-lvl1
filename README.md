@@ -56,3 +56,11 @@ GCD - the greatest common divisor. Can you solve it out?
 An arithmetic progression or arithmetic sequence is a sequence of numbers such that the difference between the consecutive terms is constant. In this game you will find out missing number in sequence. Good luck! :four_leaf_clover:
 
 [![asciicast](https://asciinema.org/a/491056.svg)](https://asciinema.org/a/491056)
+
+## Brain Prime
+
+  brain-prime
+
+Prime numbers are numbers that have only 2 factors: 1 and themselves. Just answer "yes" or "no". You'll manage it.
+
+[![asciicast](https://asciinema.org/a/491136.svg)](https://asciinema.org/a/491136)

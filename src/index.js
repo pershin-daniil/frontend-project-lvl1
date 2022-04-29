@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-// Other funtions
+// Other funtions and one special array
 export const getRandomNum = (max = 100) => Math.floor(Math.random() * max);
 
 const createArray = () => {
@@ -18,6 +18,9 @@ const createArray = () => {
   }
   return sequenceOfNumbers;
 };
+
+// eslint-disable-next-line max-len
+const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
 
 // Games show the question and then return correct answer.
 export const getIsEvenTask = () => {
@@ -79,6 +82,15 @@ export const getProgressionTask = () => {
   const questionProgressionString = progressionForQuestion.join(' ');
   console.log(`Question: ${questionProgressionString}`);
   return correctAnswer;
+};
+
+export const getIsPrimeTask = () => {
+  const currentNum = getRandomNum(100);
+  console.log(`Question: ${currentNum}`);
+  if (primeNumbers.includes(currentNum)) {
+    return 'yes';
+  }
+  return 'no';
 };
 
 // Game interface
