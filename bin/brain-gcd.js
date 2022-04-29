@@ -9,9 +9,7 @@ import {
 
 const name = intro('Find the greatest common divisor of given numbers.');
 
-let i = 0;
-
-while (i < 3) {
+for (let i = 0; i < 3;) {
   // Task
   const correctAnswer = gcd();
   // Answer
