@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/pppershin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/pppershin/frontend-project-lvl1/actions)",
+  "description": "Brain Games as first project on Hexlet",
   "bin": {
     "brain-games": "bin/games/brain-games.js",
     "brain-even": "bin/games/brain-even.js",
@@ -11,7 +11,7 @@
     "brain-progression": "bin/games/brain-progression.js",
     "brain-prime": "bin/games/brain-prime.js"
   },
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

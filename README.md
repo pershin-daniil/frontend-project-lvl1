@@ -16,7 +16,6 @@ To install Brain Games you need to clone repository by command in your shell.
 Then by using Make file install npm package localy.
 
 	make install
-	make publish
 	npm link
 
 And now you can play, the first command is
