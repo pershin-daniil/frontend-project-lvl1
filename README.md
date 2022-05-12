@@ -22,7 +22,7 @@ And now you can play, the first command is
 
 	brain-games
 
-Just say hello to you :wave:
+It just says hello to you :wave:
 
 ## Brain Even
 
