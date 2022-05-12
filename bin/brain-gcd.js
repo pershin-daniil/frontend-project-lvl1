@@ -4,7 +4,7 @@ import {
   getAnswer,
   gameLoop,
   getGCDTask,
-} from '../../src/index.js';
+} from '../src/index.js';
 
 const name = intro('Find the greatest common divisor of given numbers.');
 
