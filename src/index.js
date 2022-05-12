@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
+const ROUND_COUNT = 3;
+
 // Other funtions and one special array
 export const getRandomNum = (max = 100) => Math.floor(Math.random() * max);
 
@@ -119,7 +121,7 @@ export const final = (correctAnswer, userAnswer, counter, userName) => {
 
 // Main game function which is divided into three pieces such as task, answer and compare result
 // function with additional variables such as "name" and counter "i"
-export const gameLoop = (task, answer, name, i) => {
+const gameLoop = (task, answer, name, i) => {
   const correctAnswer = task;
   const userAnswer = answer;
   const currentResult = compareResults(correctAnswer, userAnswer) + i;
@@ -127,4 +129,37 @@ export const gameLoop = (task, answer, name, i) => {
     return final(correctAnswer, userAnswer, currentResult, name);
   }
   return currentResult;
+};
+
+// GAMES
+export const gameEven = () => {
+  const name = intro('Answer "yes" if the number is even, otherwise answer "no".');
+
+  for (let i = 0; i < ROUND_COUNT;) {
+    i = gameLoop(getIsEvenTask(), getAnswer(), name, i);
+  }
+};
+
+export const gameGcd = () => {
+  const name = intro('Find the greatest common divisor of given numbers.');
+
+  for (let i = 0; i < ROUND_COUNT;) {
+    i = gameLoop(getGCDTask(), getAnswer(), name, i);
+  }
+};
+
+export const gamePrime = () => {
+  const name = intro('Answer "yes" if given number is prime. Otherwise answer "no"');
+
+  for (let i = 0; i < 3;) {
+    i = gameLoop(getIsPrimeTask(), getAnswer(), name, i);
+  }
+};
+
+export const gameProgression = () => {
+  const name = intro('What number is missing in the progression?');
+
+  for (let i = 0; i < 3;) {
+    i = gameLoop(getProgressionTask(), getAnswer(), name, i);
+  }
 };
