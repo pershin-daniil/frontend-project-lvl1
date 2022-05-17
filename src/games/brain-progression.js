@@ -1,22 +1,20 @@
 import runGame from '../index.js';
 import getRandomInt from '../utilities.js';
 
-const createRandomProgression = (min, max) => {
-  const size = getRandomInt(min, max);
+const generateRound = () => {
+  const size = getRandomInt(5, 10);
+
   // Create first number os sequenceOfNumbers
-  const sequenceOfNumbers = [getRandomInt(0, 99)];
+  const progression = [getRandomInt(0, 99)];
   const step = getRandomInt(1, 20);
+
   // Progression formula (from 1 to i): a[i] = a[1] + (i - 1)d
   for (let i = 2; i <= size; i += 1) {
-    const firstNum = sequenceOfNumbers[0];
+    const firstNum = progression[0];
     const nextNum = firstNum + (i - 1) * step;
-    sequenceOfNumbers.push(nextNum);
+    progression.push(nextNum);
   }
-  return sequenceOfNumbers;
-};
 
-const generateRound = () => {
-  const progression = createRandomProgression(5, 10);
   const indexToChange = getRandomInt(0, progression.length - 1);
   const correctAnswer = progression[indexToChange];
   const progressionForQuestion = [];
