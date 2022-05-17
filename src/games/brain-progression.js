@@ -4,31 +4,27 @@ import getRandomInt from '../utilities.js';
 const MIN_NUMBER = 0;
 const MAX_NUMBER = 99;
 
+const generateProgression = (firstNum, step, size) => {
+  const result = [firstNum];
+  for (let i = 2; i <= size; i += 1) {
+    const nextNum = firstNum + (i - 1) * step;
+    result.push(nextNum);
+  }
+  return result;
+};
+
 const generateRound = () => {
   const size = getRandomInt(5, 10);
-
-  // Create first number os sequenceOfNumbers
-  const progression = [getRandomInt(MIN_NUMBER, MAX_NUMBER)];
+  const firstNum = getRandomInt(MIN_NUMBER, MAX_NUMBER);
   const step = getRandomInt(1, 20);
 
-  // Progression formula (from 1 to i): a[i] = a[1] + (i - 1)d
-  for (let i = 2; i <= size; i += 1) {
-    const firstNum = progression[0];
-    const nextNum = firstNum + (i - 1) * step;
-    progression.push(nextNum);
-  }
+  const progression = generateProgression(firstNum, step, size);
 
   const indexToChange = getRandomInt(0, progression.length - 1);
   const answer = progression[indexToChange];
-  const progressionForQuestion = [];
+  progression[indexToChange] = '..';
 
-  // eslint-disable-next-line no-restricted-syntax
-  for (const num of progression) {
-    if (num === answer) progressionForQuestion.push('..');
-    if (num !== answer) progressionForQuestion.push(num);
-  }
-
-  const questionProgressionString = progressionForQuestion.join(' ');
+  const questionProgressionString = progression.join(' ');
   const question = `Question: ${questionProgressionString}`;
   return [answer.toString(), question];
 };
