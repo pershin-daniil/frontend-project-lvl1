@@ -1,18 +1,7 @@
 import runGame from '../index.js';
 import getRandomInt from '../utilities.js';
 
-const findGCD = (num1, num2) => {
-  while (num1 !== 0 && num2 !== 0) {
-    if (num1 > num2) {
-      // eslint-disable-next-line no-param-reassign
-      num1 %= num2;
-    } else {
-      // eslint-disable-next-line no-param-reassign
-      num2 %= num1;
-    }
-  }
-  return String(num1 + num2);
-};
+const findGCD = (x, y) => (y > 0 ? findGCD(y, x % y) : Math.abs(x));
 
 const generateRound = () => {
   const num1 = getRandomInt(1, 100);
@@ -20,9 +9,9 @@ const generateRound = () => {
 
   const question = `Question: ${num1} ${num2}`;
 
-  const correctAnswer = findGCD(num1, num2);
+  const answer = findGCD(num1, num2).toString();
 
-  return [correctAnswer, question];
+  return [answer, question];
 };
 
 const description = 'Find the greatest common divisor of given numbers.';
