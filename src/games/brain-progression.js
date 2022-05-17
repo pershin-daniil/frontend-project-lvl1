@@ -16,18 +16,18 @@ const generateRound = () => {
   }
 
   const indexToChange = getRandomInt(0, progression.length - 1);
-  const correctAnswer = progression[indexToChange];
+  const answer = progression[indexToChange];
   const progressionForQuestion = [];
 
   // eslint-disable-next-line no-restricted-syntax
   for (const num of progression) {
-    if (num === correctAnswer) progressionForQuestion.push('..');
-    if (num !== correctAnswer) progressionForQuestion.push(num);
+    if (num === answer) progressionForQuestion.push('..');
+    if (num !== answer) progressionForQuestion.push(num);
   }
 
   const questionProgressionString = progressionForQuestion.join(' ');
   const question = `Question: ${questionProgressionString}`;
-  return [String(correctAnswer), question];
+  return [answer.toString(), question];
 };
 
 const description = 'What number is missing in the progression?';
