@@ -15,7 +15,7 @@ const createRandomProgression = (min, max) => {
   return sequenceOfNumbers;
 };
 
-const getProgressionTask = () => {
+const generateRound = () => {
   const progression = createRandomProgression(5, 10);
   const indexToChange = getRandomInt(0, progression.length - 1);
   const correctAnswer = progression[indexToChange];
@@ -34,4 +34,4 @@ const getProgressionTask = () => {
 
 const description = 'What number is missing in the progression?';
 
-export default () => runGame(description, getProgressionTask);
+export default () => runGame(description, generateRound);

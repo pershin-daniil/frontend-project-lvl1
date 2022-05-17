@@ -3,7 +3,7 @@ import getRandomInt from '../utilities.js';
 
 const operators = ['+', '-', '*'];
 
-const getExpressionTask = () => {
+const generateRound = () => {
   const currentOperator = operators[getRandomInt(0, operators.length - 1)];
   const num1 = getRandomInt(1, 100);
   const num2 = getRandomInt(1, 100);
@@ -23,4 +23,4 @@ const getExpressionTask = () => {
 
 const description = 'What is the result of the expression?';
 
-export default () => runGame(description, getExpressionTask);
+export default () => runGame(description, generateRound);

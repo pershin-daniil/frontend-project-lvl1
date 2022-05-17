@@ -6,7 +6,7 @@ const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53
 
 const isPrime = (num) => primeNumbers.includes(num);
 
-const getIsPrimeTask = () => {
+const generateRound = () => {
   const currentNum = getRandomInt(1, 100);
   const question = `Question: ${currentNum}`;
   if (isPrime(currentNum)) {
@@ -17,4 +17,4 @@ const getIsPrimeTask = () => {
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
-export default () => runGame(description, getIsPrimeTask);
+export default () => runGame(description, generateRound);
