@@ -1,11 +1,14 @@
 import runGame from '../index.js';
 import getRandomInt from '../utilities.js';
 
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 100;
+
 const findGCD = (x, y) => (y > 0 ? findGCD(y, x % y) : Math.abs(x));
 
 const generateRound = () => {
-  const num1 = getRandomInt(1, 100);
-  const num2 = getRandomInt(1, 100);
+  const num2 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
+  const num1 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
 
   const question = `Question: ${num1} ${num2}`;
 

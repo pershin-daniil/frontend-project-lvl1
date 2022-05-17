@@ -1,11 +1,14 @@
 import runGame from '../index.js';
 import getRandomInt from '../utilities.js';
 
+const MIN_NUMBER = 0;
+const MAX_NUMBER = 99;
+
 const generateRound = () => {
   const size = getRandomInt(5, 10);
 
   // Create first number os sequenceOfNumbers
-  const progression = [getRandomInt(0, 99)];
+  const progression = [getRandomInt(MIN_NUMBER, MAX_NUMBER)];
   const step = getRandomInt(1, 20);
 
   // Progression formula (from 1 to i): a[i] = a[1] + (i - 1)d

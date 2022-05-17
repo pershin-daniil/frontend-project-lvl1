@@ -1,6 +1,9 @@
 import runGame from '../index.js';
 import getRandomInt from '../utilities.js';
 
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 100;
+
 const operations = {
   '+': (a, b) => a + b,
   '-': (a, b) => a - b,
@@ -8,8 +11,8 @@ const operations = {
 };
 
 const generateRound = () => {
-  const num1 = getRandomInt(1, 100);
-  const num2 = getRandomInt(1, 100);
+  const num1 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
+  const num2 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
   const operationsKeysArray = Object.keys(operations);
   const operation = operationsKeysArray[getRandomInt(0, operationsKeysArray.length - 1)];
 
