@@ -1,24 +1,27 @@
 import runGame from '../index.js';
 import getRandomInt from '../utilities.js';
 
-const operators = ['+', '-', '*'];
+const operations = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+};
+
+const giveRandomExpressionAnswer = (num1, num2) => {
+  const operationsKeysArray = Object.keys(operations);
+  const operation = operationsKeysArray[getRandomInt(0, operationsKeysArray.length - 1)];
+
+  const result = String(operations[operation](num1, num2));
+
+  return [result, operation];
+};
 
 const generateRound = () => {
-  const currentOperator = operators[getRandomInt(0, operators.length - 1)];
   const num1 = getRandomInt(1, 100);
   const num2 = getRandomInt(1, 100);
-  const question = `Question: ${num1} ${currentOperator} ${num2}`;
-  const indexOfOperator = operators.indexOf(currentOperator);
-  if (indexOfOperator === 0) {
-    return [String(num1 + num2), question];
-  }
-  if (indexOfOperator === 1) {
-    return [String(num1 - num2), question];
-  }
-  if (indexOfOperator === 2) {
-    return [String(num1 * num2), question];
-  }
-  return null;
+  const [answer, operation] = giveRandomExpressionAnswer(num1, num2);
+  const question = `Question: ${num1} ${operation} ${num2}`;
+  return [answer, question];
 };
 
 const description = 'What is the result of the expression?';
