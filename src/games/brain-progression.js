@@ -1,28 +1,35 @@
 import runGame from '../index.js';
 import getRandomInt from '../utilities.js';
 
-const MIN_NUMBER = 0;
-const MAX_NUMBER = 99;
+const MIN = {
+  START: 5,
+  LENGTH: 5,
+  DIFF: 2,
+};
+const MAX = {
+  START: 30,
+  LENGTH: 10,
+  DIFF: 10,
+};
 
-const generateProgression = (firstNum, step, size) => {
-  const result = [firstNum];
-  for (let i = 2; i <= size; i += 1) {
-    const nextNum = firstNum + (i - 1) * step;
-    result.push(nextNum);
+const generateProgression = (start, step, size) => {
+  const result = [];
+  for (let i = 0; i < size; i += 1) {
+    const num = start + (i) * step;
+    result.push(num);
   }
   return result;
 };
 
 const generateRound = () => {
-  const size = getRandomInt(5, 10);
-  const firstNum = getRandomInt(MIN_NUMBER, MAX_NUMBER);
-  const step = getRandomInt(1, 20);
+  const size = getRandomInt(MIN.LENGTH, MAX.LENGTH);
+  const firstNum = getRandomInt(MIN.START, MAX.START);
+  const step = getRandomInt(MIN.DIFF, MAX.DIFF);
 
   const progression = generateProgression(firstNum, step, size);
 
-  const indexToChange = getRandomInt(0, progression.length - 1);
-  const answer = progression[indexToChange];
-  progression[indexToChange] = '..';
+  const indexToChange = getRandomInt(0, size - 1);
+  const answer = progression.splice(indexToChange, 1, '..');
 
   const questionProgressionString = progression.join(' ');
   const question = `Question: ${questionProgressionString}`;
