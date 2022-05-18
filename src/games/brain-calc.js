@@ -13,8 +13,8 @@ const operations = {
 const generateRound = () => {
   const num1 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
   const num2 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
-  const operationsKeysArray = Object.keys(operations);
-  const operation = operationsKeysArray[getRandomInt(0, operationsKeysArray.length - 1)];
+  const keys = Object.keys(operations);
+  const operation = keys[getRandomInt(0, keys.length - 1)];
 
   const answer = String(operations[operation](num1, num2));
   const question = `Question: ${num1} ${operation} ${num2}`;
