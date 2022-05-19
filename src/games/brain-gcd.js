@@ -10,7 +10,7 @@ const generateRound = () => {
   const num2 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
   const num1 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
 
-  const question = `Question: ${num1} ${num2}`;
+  const question = `${num1} ${num2}`;
 
   const answer = findGCD(num1, num2).toString();
 

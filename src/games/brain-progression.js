@@ -32,7 +32,7 @@ const generateRound = () => {
   const answer = progression.splice(indexToChange, 1, '..');
 
   const questionProgressionString = progression.join(' ');
-  const question = `Question: ${questionProgressionString}`;
+  const question = `${questionProgressionString}`;
   return [answer.toString(), question];
 };
 

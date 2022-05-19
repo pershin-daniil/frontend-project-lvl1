@@ -17,7 +17,7 @@ const generateRound = () => {
   const operation = keys[getRandomInt(0, keys.length - 1)];
 
   const answer = String(operations[operation](num1, num2));
-  const question = `Question: ${num1} ${operation} ${num2}`;
+  const question = `${num1} ${operation} ${num2}`;
   return [answer, question];
 };
 
