@@ -7,9 +7,8 @@ const MAX_NUMBER = 100;
 const isEven = (num) => num % 2 === 0;
 
 const generateRound = () => {
-  const num = getRandomInt(MIN_NUMBER, MAX_NUMBER);
-  const question = `Question: ${num}`;
-  const answer = isEven(num) ? 'yes' : 'no';
+  const question = getRandomInt(MIN_NUMBER, MAX_NUMBER);
+  const answer = isEven(question) ? 'yes' : 'no';
   return [answer, question];
 };
 

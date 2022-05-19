@@ -14,7 +14,7 @@ export default (description, getRound) => {
 
   for (let i = 0; i < ROUND_COUNT; i += 1) {
     const [correctAnswer, question] = getRound();
-    console.log(question);
+    console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
 
