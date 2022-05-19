@@ -8,8 +8,8 @@ const isEven = (num) => num % 2 === 0;
 
 const generateRound = () => {
   const question = getRandomInt(MIN_NUMBER, MAX_NUMBER);
-  const correctAnswer = isEven(question) ? 'yes' : 'no';
-  return [correctAnswer, question];
+  const answer = isEven(question) ? 'yes' : 'no';
+  return [answer, question];
 };
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';

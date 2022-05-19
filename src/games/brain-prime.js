@@ -14,9 +14,9 @@ const isPrime = (num) => {
 };
 
 const generateRound = () => {
-  const currentQuestion = getRandomInt(MIN_NUMBER, MAX_NUMBER);
-  const answer = isPrime(currentQuestion) ? 'yes' : 'no';
-  return [answer, currentQuestion];
+  const question = getRandomInt(MIN_NUMBER, MAX_NUMBER);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return [answer, question];
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
